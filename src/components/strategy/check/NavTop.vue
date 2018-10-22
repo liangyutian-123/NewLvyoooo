@@ -1,24 +1,19 @@
 <!--上面导航-->
 <template>
-
   <!--<div class="row">-->
-
   <!--导航-->
   <div class="container-fluid" style="margin: 0;padding: 0">
     <div class="col-md-1"><img src="../../../assets/travelnote/logoweight.png"
                                alt="" style="width: 130px;height: 40px;float: left;margin-left: 130px;margin-top: 12px"></div>
     <div class="row text-center " style="background:white;margin: 0;padding: 0;width: 100%;">
       <div class="col-lg-1 visible-lg"></div>
-
       <!--图标-->
-
       <div class="col-lg-1 col-md-1 col-sm-1 col-xs-2">
         <!--转至首页-->
         <a href="#">
           <!--<img  class="logo" src="../assets/logo.png" alt="">-->
         </a>
       </div>
-
       <div class="col-lg-1 col-md-1 col-sm-2 col-xs-2 hasborder">
         <router-link to="/">
           <a href="#">
@@ -164,6 +159,7 @@
     background-repeat: no-repeat;
     background-position: 95%;
     margin-top: 5px;
+    padding-left: 20px;
   }
   .input-form-control:focus{
     outline-style: none;
@@ -174,10 +170,11 @@
     -webkit-user-select: text;
     outline-color: transparent;
     box-shadow: none;
-    border:1px solid #ff9d00;
-    background: url("../../../assets/strategy/search3.png");
+    border:1px solid #7bcc57;
+    background: url("../../../assets/strategy/search22.png");
     background-position: 95%;
     background-repeat: no-repeat;
+    padding-left: 20px;
   }
 
   .search{

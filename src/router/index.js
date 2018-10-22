@@ -22,7 +22,7 @@ import RegistMain from '../components/travelnote/RegistMain'
 import SearchPages from '../components/travelnote/SearchPages'
 import  TravelNotes from '../components/travelnote/TravelNotes'
 import WriteNotes from '../components/travelnote/WriteNotes'
-
+import DetailPages from '../components/travelnote/DetailPages'
 // 攻略部分（姜）
 import all from '../components/strategy/check/all'
 import E_Top from '../components/strategy/edit/E_Top'
@@ -69,6 +69,11 @@ export default new Router({
       path:'/write',
       name:'writenotes',
       component:WriteNotes
+    },
+    {
+      path:'/detail',
+      name:'detailpages',
+      component:DetailPages
     },
     // 首页用户部分
     {

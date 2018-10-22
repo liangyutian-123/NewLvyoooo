@@ -1,25 +1,17 @@
 <template>
   <div class="container-fluid" style="height: 600px">
-    <div class="nav-bar">
-      <div class="col-md-1">
-        <router-link to="/">
-          <img src="../../assets/travelnote/logo--.png" alt="" id="logo-img">
-        </router-link>
+
+    <div class="container-fluid" style="padding: 0px; margin: 0px ;height: 58px;border-bottom: 1px solid rgba(208,208,208,0.56) ">
+      <div class="col-md-3" id="logo-img"></div>
+      <div class="col-md-6 hidden-xs form-group search " style="margin-top: 11px">
+        <input  type="search" id="search-bar-input" placeholder="搜索目的地">
       </div>
-      <div class="col-md-4">
-        <input type="search" placeholder="搜索目的地/攻略/游记" id="search-bar">
-      </div>
-      <div class="col-md-1">
-        <button type="submit" id="search-btn"><img src="../../assets/travelnote/search.png" alt=""></button>
-      </div>
-      <div class="col-md-4"></div>
-      <div class="col-md-2">
-        <div id="user">
-          <a href="">登录/注册></a>
-        </div>
+
+      <div class="col-md-3" id="user-img">
+        <img src="http://n2-q.mafengwo.net/s12/M00/35/2C/wKgED1uqImOAAxCCAAAeJTVWYJU680.png?imageMogr2%2Fthumbnail%2F%2132x32r%2Fgravity%2FCenter%2Fcrop%2F%2132x32%2Fquality%2F90"
+          height="32" width="32" alt="">
       </div>
     </div>
-
 
     <div class="nav-list">
       <ul class="ul-list">
@@ -30,7 +22,6 @@
         <li>找人</li>
       </ul>
     </div>
-
 
     <div class="container" style="position: relative ; left: 8%">
       <!--景点介绍-->
@@ -64,7 +55,7 @@
       <!--侧边栏-->
       <div class="col-md-2">
         <div id="right">
-          <h2><span>马来西亚热门推荐景点</span></h2>
+          <h2><span style="margin-left: 20px">马来西亚热门推荐景点</span></h2>
           <div class="col-md-4 web-side-img"></div>
           <div class="col-md-4 web-side-img"></div>
           <div class="col-md-4 web-side-img"></div>
@@ -104,13 +95,8 @@
       </div>
     </div>
 
-
     <div class="footer">addfaff</div>
   </div>
-
-
-
-
 
 </template>
 
@@ -127,46 +113,58 @@
     list-style: none;
   }
 
-  .container-fluid .nav-bar {
-    float: left;
-    width: 100%;
-    height: 66px;
-    background: #4b4b4b;
+  /*导航*/
+  .container-fluid {
+    height: 58px;
+    /*border-bottom: solid 1px #9e9e9e;*/
   }
 
   #logo-img {
-    width: 40px;
-    height: 60px;
-    margin-left: 35px;
+    background-image: url("../../assets/travelnote/logoweight.png");
+    height: 40px;
+    width: 150px;
+    background-repeat: no-repeat;
+    margin-left: 100px;
+    margin-top: 5px;
   }
 
-  #search-bar {
-    width: 480px;
-    height: 36px;
-    border: 0 none;
-    line-height: 36px;
-    font-size: 14px;
-    color: rgba(109, 109, 109, 0.59);
-    border-radius: 4%;
+  #search-bar-input {
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background-color: #fafafa;
+    outline-style: none;
+    width: 450px;
+    height: 30px;
+    -webkit-appearance: none;
+    -webkit-user-select: text;
+    outline-color: transparent;
+    box-shadow: none;
+    border: 1px solid #7bcc57;
+    background: url("../../assets/strategy/search22.png");
+    background-position: 95%;
+    background-repeat: no-repeat;
+    margin-left: 10px;
+    margin-top: 2px;
+    padding-left: 20px;
+  }
+
+  #user-img img {
+    vertical-align: middle;
+    border-radius: 50%;
     margin-top: 15px;
+    margin-left: 240px;
   }
-
-  #search-btn {
-    width: 40px;
-    float: left;
-    height: 36px;
-    background-color: #3f9f5f;
-    border-radius: 4px;
+  #user-img img:hover {
+    vertical-align: middle;
+    border-radius: 50%;
     margin-top: 15px;
-    margin-right: 15px;
+    margin-left: 240px;
+    border:3px solid #7bcc57 ;
   }
 
-  #user {
-    font-size: 16px;
-    margin-top: 18px;
-    color: #fff;
-  }
-
+  /*-----------------------------*/
   #user a {
     color: #3f9f5f;
     text-decoration: none;
@@ -248,7 +246,7 @@
     font-weight: bold;
     color: #333 !important;
     margin-top: 5px;
-    margin-left: 5px;
+    margin-left: 4px;
   }
 
   .web-side-img {

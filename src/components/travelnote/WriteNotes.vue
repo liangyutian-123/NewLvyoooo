@@ -32,7 +32,6 @@
     <div class="container">
       <div class="col-md-9" id="write-notes">
         <div contenteditable="true" id="write-notes-day">游记从这里开始.....</div>
-
       </div>
       <div class="col-md-3" id="web-side">
         <div class="click-list">
@@ -103,34 +102,49 @@
     /*圆角*/
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    border-bottom-left-radius: 5px;
-    background-color: #fafafa;
+    border-bottom-right-radius:5px;
+    border-bottom-left-radius:5px;
+    background-color:#EFEFEF;
     border: none;
-    width: 130px;
-    height: 28px;
-    transition: width .5s ease 0s;
-    /*background-image: url("../assets/4.svg");*/
+    width: 60%;
+    height: 30px;
+    transition: width 0.5s;
+    background-image: url("../../assets/strategy/search2.svg");
     background-repeat: no-repeat;
-    margin-left: 10px;
-    margin-top: 6px;
+    background-position: 95%;
+    margin-top: 5px;
+    padding-left: 20px;
   }
 
   #search-bar-input:focus {
     outline-style: none;
-    transition: width .5s ease 0s;
-    width: 375px;
+    transition: width 1s;
+    width: 400px;
     text-shadow: none;
     -webkit-appearance: none;
     -webkit-user-select: text;
     outline-color: transparent;
     box-shadow: none;
-    border: 1px solid #ff9d00;
-    /*background: url("../assets/5.svg");*/
+    border:1px solid #7bcc57;
+    background: url("../../assets/strategy/search22.png");
     background-position: 95%;
     background-repeat: no-repeat;
+    padding-left: 20px;
+  }
+  #user-img img {
+    /*border: 0;*/
+    vertical-align: middle;
+    border-radius: 50%;
+    margin-top: 15px;
     margin-left: 10px;
-    margin-top: 6px;
+  }
+  #user-img img:hover {
+    /*border: 0;*/
+    vertical-align: middle;
+    border-radius: 50%;
+    margin-top: 15px;
+    margin-left: 10px;
+    border:3px solid #7bcc57 ;
   }
 
   #user-img img {
@@ -240,10 +254,10 @@
   }
 
   #write-notes-day {
-    width: 550px;
-    height: 700px;
-    margin: auto;
-  }
+     width: 550px;
+     height: 700px;
+     margin: auto;
+   }
 
   /*------------------------------------------*/
   /*webside*/

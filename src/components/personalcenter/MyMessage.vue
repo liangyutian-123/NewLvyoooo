@@ -7,7 +7,7 @@
       <div class="col-md-1">
 
       </div>
-      <div class="col-md-8 message">
+      <div class="col-md-8 message" style="background:#fff">
         <!--<div class="li col-md-12"><img :src="user['icno__imageurl']" class="img-circle changeicno" alt="" width="70px" height="70px"></div>-->
         <div class="li col-md-12">
           <div class="col-md-3"><span style="color: #a1a1a1">用户名</span></div>

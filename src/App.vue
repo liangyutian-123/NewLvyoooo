@@ -3,7 +3,9 @@
   <div id="app">
     <!--<motaikuang></motaikuang>-->
     <!--<testx></testx>-->
+    <!--<detail-pages></detail-pages>-->
     <router-view/>
+
   </div>
   </div>
 </template>

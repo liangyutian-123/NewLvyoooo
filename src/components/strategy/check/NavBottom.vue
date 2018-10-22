@@ -41,8 +41,7 @@
 
               <!--传递要编辑的帖子id-->
               <!--<a href=”http://www.baidu.com” target=”_blank”> 编辑 </a>-->
-              <router-link :to="{name:'edit'}" tag="a" target="_blank" class="size text-center edit float a-none-line"
-                           id="edit">编辑
+              <router-link :to="{name:'edit'}" tag="a" target="_blank" class="size text-center edit float a-none-line" id="edit">编辑
               </router-link>
               <!--<a href="javascript:;"  class="size text-center edit float a-none-line" id="edit">编辑</a>-->
             </div>

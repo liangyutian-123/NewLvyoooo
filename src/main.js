@@ -29,6 +29,7 @@ import SearchPages from './components/travelnote/SearchPages'
 import WriteNotes from './components/travelnote/WriteNotes'
 import TravelNotes from './components/travelnote/TravelNotes'
 import TravelMian from './components/travelnote/TravelMain'
+import DetailPages from './components/travelnote/DetailPages'
 
 // 攻略部分(姜)
 import NavTop from './components/strategy/check/NavTop'
@@ -55,6 +56,7 @@ import Mtravelnote from './components/travelnote/Mtravelnote'
 import Discuss from './components/strategy/check/Discuss'
 
 
+
 // import Footer from './components/Footer'
 // import MyTravelnotes from './components/personalcenter/MyTravelnotes'
 
@@ -75,13 +77,16 @@ Vue.component('login',Login);
 Vue.component('regist',Regist);
 
 
-// 游记部分(梁雨田)
+// 游记部分(梁雨甜)
 Vue.component('login-main',LoginMain)
 Vue.component('regist-main',RegistMian)
 Vue.component('search-pages',SearchPages)
 Vue.component('travel-notes',TravelNotes)
 Vue.component('write-notes',WriteNotes)
 Vue.component('travel-main',TravelMian)
+Vue.component('detail-pages',DetailPages)
+
+
 // 游记模态框
 Vue.component('mtravelnote',Mtravelnote)
 

@@ -3,7 +3,7 @@
   <div class="container-fluid bg-color-ff" style="padding-left: 50px" id="two">
     <!--<div class="row">-->
 
-    <div class="row" style="width:100%;border: #e4e4e4 1px solid ;border-right: none;border-left: none;border-top: none">
+    <div class="row" style="width:100%;border: #e4e4e4 1px solid ;border-right: none;border-left: none;border-top: none;margin-top: 25px">
       <div class="col-lg-1" ></div>
 
       <!--具体内容-->

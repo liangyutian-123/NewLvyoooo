@@ -16,15 +16,9 @@
           <li><a href="####">游记</a></li>
         </ul>
         <ul class="nav navbar navbar-right usericno ">
-          <!--<li><a class="nopadding user" href="####" ><img class="img-circle icno col-md-6"  alt="" height="44px" width="44px"><span class="right  username nomargin">棕色试剂瓶</span></a></li>-->
-          <li><a class="nopadding user" href="####"><img class="img-circle icno col-md-6" :src="user.usericno" alt=""
-                                                         height="44px" width="44px"><span
-            class="right  username nomargin">棕色试剂瓶</span></a></li>
+          <li><a class="nopadding user" href="####"><img class="img-circle icno col-md-6" :src="user.usericno" alt="" height="44px" width="44px"><span
+            class="right  username nomargin" style="color:#555">棕色试剂瓶</span></a></li>
         </ul>
-        <!--<ul class="col-md-2 nav navbar-nav navbar-right">-->
-        <!--<li><a href="####">登录</a></li>-->
-        <!--<li><a href="####">注册</a></li>-->
-        <!--</ul>-->
       </div>
     </div>
     <!--图片-->
@@ -53,26 +47,24 @@
           <div class="navbar col-md-6">
             <div class="col-md-12"><span class="username" v-text="user.username"></span></div>
             <div class="col-md-3"></div>
+
+            <!--性别-->
             <div class="col-md-9"><img src="../../assets/images/男.png" alt=""></div>
           </div>
           <div class="col-md-12" style="height: 55px; color: white; margin-top:10px;">
-            <span v-text="user['content']">这里是简介，没错，你没有看错。</span>
+            <span v-text="user['content']">个人简介</span>
           </div>
+
+          <!--------------------------------------------------->
           <div class="myspan col-md-12 bottom">
-            <div class="col-md-4">足迹 <span class="col-md-12" v-text="some['focus']">12</span></div>
-            <div class="col-md-4" style="border-right: thin solid darkgrey; border-left: thin solid darkgrey">粉丝 <span
+            <div class="col-md-4" style="color:#555">足迹 <span class="col-md-12" v-text="some['focus']">12</span></div>
+            <div class="col-md-4"
+                 style="border-right: thin solid darkgrey; border-left: thin solid darkgrey;color:#555">关注<span
               class="col-md-12" v-text="some['fans']"></span></div>
-            <div class="col-md-4">积分 <span class="col-md-12">12</span></div>
-
-
-            <!--<div class="  "><a href="####">关注</a><span class="badge" v-text="some.focus"></span></div>-->
-            <!--<div class="  "><a href="####">粉丝</a><span class="badge"v-text="some.fans"></span></div>-->
-            <!--<div class=" "><a href="####">积分</a><span class="badge" v-text="user.mark"></span></div>-->
+            <div class="col-md-4" style="color:#555">积分 <span class="col-md-12" style="color:#555">12</span></div>
           </div>
         </div>
-
         <ul class="rlist">
-          <!--<li><a style="display: none" href="####">我的收藏</a></li>-->
           <li @click="hide">
             <router-link to="/usercenter/mycollect">
               <div class="rbtn"><span>我的关注</span><span class="badge badgepart">12</span></div>
@@ -98,13 +90,13 @@
               <div class="rbtn"><span>我的攻略</span><span class="badge badgepart">212</span></div>
             </router-link>
           </li>
-
-          <!--<li><a href="####">北京</a></li>-->
         </ul>
       </div>
       <!--中间右半边-->
       <div class="middle-right col-md-7 ">
-        <router-link to="/edit"><div class="col-md-6 btn button1 button navbar-brand">写游记</div></router-link>
+        <router-link to="/edit">
+          <div class="col-md-6 btn button1 button navbar-brand">写游记</div>
+        </router-link>
 
         <!--在个人中心跳转到写攻略-->
         <router-link to="/write">
@@ -113,7 +105,7 @@
         <!--信息显示-->
         <div class="content">
           <div class="default" v-if="showcontent == 'index'">
-            <img src="../../assets/travelnote/day2.png" alt="" style="width: 740px;height: 550px">
+            <img src="../../assets/travelnote/day2.png" alt="" style="width: 760px;height: 470px">
           </div>
           <router-view/>
         </div>
@@ -311,21 +303,16 @@
     margin-bottom: 0 !important;
     color: whitesmoke !important;
     border-radius: 0px !important;
-    /*display: none;*/
   }
 
   .sowingmap #searchbox {
     width: 300px !important;
     height: 60px !important;
     background-color: rgb(14, 0, 6) !important;
-    /*filter: alpha(opacity=50);*/
     position: absolute !important;
     top: 500px !important;
     left: 500px !important;
-    /*font-size: 14px;*/
-    /*color: whitesmoke;*/
     z-index: 10 !important;
-    /*transition: height 0.1s;*/
     border-radius: 4px;
   }
 
@@ -447,6 +434,7 @@
     overflow: hidden;
   }
 
+  /*个人中心信息*/
   .mymessage {
     padding-top: 10px;
     margin-top: 15px;
@@ -454,7 +442,7 @@
     border-radius: 4px;
     height: 250px;
     box-shadow: rgba(46, 46, 51, 0.24) 0px 1px 6px;
-    background-color: #53a1c7;
+    background-color: #f5f5f5;
   }
 
   .icon {
@@ -500,44 +488,18 @@
     color: #444444 !important;
   }
 
-  /*.middle-left ul li a:visited{*/
-  /*!*border-radius: 10px;*!*/
-  /*width: 250px !important;*/
-  /*!*color: #d8d8d8;*!*/
-  /*color: #f5f5f5!important;*/
-  /*box-shadow: rgba(46, 46, 51, 0.24) 1px 1px 3px;*/
-  /*background-color: #1F64A3 !important;*/
-  /*margin: 15px;*/
-  /*margin-left: 50px;*/
-  /*transition: width 0.5s;*/
-
-  /*!*transition: width 0.2s;*!*/
-  /*}*/
-  /*.choose-left a{*/
-  /*width: 268.25px!important;*/
-
-  /*}*/
-  /*.choose-left li a:hover{*/
-  /*background-color: #999999;*/
-  /*width: 250px !important;*/
-  /*}*/
-  /*.choose-left li:hover{*/
-  /*background-color: #999999;*/
-  /*width: 260px !important;*/
-  /*}*/
   .myspan {
     display: flex;
     height: 40px;
     padding: 0;
     border-radius: 4px;
-    /*background-color: #8fa6cc;*/
+    color: gray;
   }
 
   .myspan div {
     color: #dfdfdf;
     font-size: 15px;
     font-weight: bold;
-    /*line-height: 30px;*/
     height: 40px;
     padding: 0px 15px 25px 15px;
     text-align: center;
@@ -558,7 +520,6 @@
     height: 100%;
     border-radius: 3px;
     text-align: center;
-    /*font-size: 13px;*/
     color: #333333 !important;
     box-shadow: rgba(51, 51, 51, 0.31) 1px 1px 10px 0px;
     margin: 0 5px;
@@ -573,8 +534,6 @@
   .middle-right {
     height: 100%;
     overflow: hidden;
-
-    /*background-color: #4cae4c;*/
   }
 
   .button1 {
@@ -599,22 +558,16 @@
 
   .button:hover {
     opacity: 0.8;
-    /*background-color: rgba(213, 209, 213, 0.21);*/
     box-shadow: rgba(51, 51, 51, 0.31) 0px 1px 10px 1px;
 
   }
 
   .content {
-    /*margin: 15px 0;*/
     float: left;
     width: 100%;
-    /*margin-top: 80px;*/
     border-radius: 4px;
     min-height: 500px;
     margin-bottom: 20px;
-    /*overflow: hidden;*/
-    /*background-color: rgba(255, 251, 253, 0.92);*/
-    /*background-color: rgba(126, 255, 85, 0.92);*/
   }
 
   .myfocus {

@@ -3,17 +3,17 @@
   <ul class="myfocus container-fluid">
     <li class="nav navbar navbar-nav col-md-4  card">
       <div class="col-md-12  margin icno">
-        <div class="row">
+        <div class="row" style="background: white" >
           <div class="col-md-3"></div>
           <div class="focus-icon col-md-6  "><a href="####"><img class="img-circle" src="http://n3-q.mafengwo.net/s10/M00/0F/9B/wKgBZ1iUpFWAbScxAAC2Vfg46fo14.jpeg?imageMogr2%2Fthumbnail%2F%21200x200r%2Fgravity%2FCenter%2Fcrop%2F%21200x200%2Fquality%2F90" height="80" width="80"></a></div>
           <div class="col-md-3"></div>
         </div>
       </div>
-      <div class="name col-md-12">旧时心语</div>
+      <div class="name col-md-12">昵称</div>
       <div class="hei col-md-12 margin">
-        <div class="col-md-3 nopadding"><p>10</p><a href="####">粉丝</a></div>
-        <div class="col-md-6 nopadding"><p>2345</p><a href="####">游记</a></div>
-        <div class="col-md-3 nopadding"><p>23</p><a href="####">攻略</a></div>
+        <div class="col-md-3 nopadding"><a href="####">粉丝</a><p>10</p></div>
+        <div class="col-md-6 nopadding"><a href="####">游记</a><p>2345</p></div>
+        <div class="col-md-3 nopadding"><a href="####">攻略</a><p>23</p></div>
       </div>
       <div class="col-md-12 anniu">
         <div class="btn  col-md-5 cancel">取消关注</div>
@@ -83,6 +83,7 @@ export default {
     align-items: center;
   }
   .card{
+    width: 300px;
     border: rgba(0, 0, 0, 0.2) 1px solid;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 10px 1px ;
@@ -94,7 +95,8 @@ export default {
     height: 20px;
     font-size: 20px;
     font-weight: bold;
-    margin: 10px auto;
+    margin: 15px auto;
+    text-align: center;
   }
   .nopadding{
     padding: 0px !important;
@@ -109,6 +111,7 @@ export default {
   }
   a{
     font-weight: bold;
+    color: gray;
   }
   .cancel{
     background-color: darkgrey;
@@ -120,13 +123,13 @@ export default {
 
   }
   .message{
-    border:1px solid limegreen;
-    color: limegreen;
+    border:1px solid darkgrey;
+    color: darkgrey;
     margin-left: 29.875px;
   }
   .message:hover{
     color: white;
-    background-color: limegreen;
+    background-color: darkgrey;
     transition: background-color 0.2s, color 0.3s;
   }
   .anniu{

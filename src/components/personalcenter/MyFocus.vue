@@ -1,36 +1,51 @@
 <template>
   <div>
     <ul class="myfocus container-fluid">
-      <li class="nav navbar navbar-nav col-md-4  card">
-        <!--<div class="col-md-12  margin icno">-->
-        <!--<div class="row">-->
-        <!--<div class="col-md-3"></div>-->
-        <!--<div class="focus-icon col-md-6"><a href="####"><img class="img-circle"-->
-        <!--src="http://n3-q.mafengwo.net/s10/M00/0F/9B/wKgBZ1iUpFWAbScxAAC2Vfg46fo14.jpeg?imageMogr2%2Fthumbnail%2F%21200x200r%2Fgravity%2FCenter%2Fcrop%2F%21200x200%2Fquality%2F90"-->
-        <!--height="80" width="80"></a></div>-->
-        <!--<div class="col-md-3"></div>-->
-        <!--</div>-->
-        <!--</div>-->
-        <!--<div class="name col-md-12">旧时心语</div>-->
+      <li class="nav navbar navbar-nav col-md-4  card" style="contenteditable:true">
+        <div class="col-md-3 collection " ref="abc" @click="showita($event)">游记收藏</div>
+        <div class="col-md-3 collection" ref="def" @click="showita($event)">攻略收藏</div>
+        <!--游记详情-->
+        <div v-if="!this.showit">
+          <div class="col-md-12" style="margin-top: 20px">
+            <div class="col-md-4 content-img"><img src="../../assets/images/collection-img1.png" alt=""></div>
+            <div class="col-md-8">
+              <a href="">
+                <h3 style="margin-top: 0;color: #fa0">岛屿来信,我想唱给你听
+                  <button type="button" class="btn-collect">取消收藏</button>
+                </h3>
+              </a>
 
-        <!--<div class="hei col-md-12 margin">-->
-        <!--<div class="col-md-3 nopadding"><p>10</p><a href="####">粉丝</a></div>-->
-        <!--<div class="col-md-6 nopadding"><p>2345</p><a href="####">游记</a></div>-->
-        <!--<div class="col-md-3 nopadding"><p>23</p><a href="####">攻略</a></div>-->
-        <!--</div>-->
-        <div class="col-md-6 collection">攻略收藏</div>
-        <div class="col-md-6">取消收藏</div>
-        <div class="col-md-12 collection-content">攻略收藏内容</div>
+              <p style="color: #666">
+                <img src="http://n3-q.mafengwo.net/s12/M00/ED/22/wKgED1vEm1GAJYGdAA4JRgRT65c86.jpeg?
+                imageMogr2%2Fthumbnail%2F%21196x140r%2Fgravity%2FCenter%2Fcrop%2F%21196x140%2Fquality%2F90"
+                     style="width: 16px;height: 16px">
+                作者：梁雨甜
+              </p>
+              <p style="font-size: 14px;color: #666">
+                不知从什么时候，在心底种下了这颗种子 我向往着白色沙滩躺椅旁的橘子汽水
+                我期待着骑行在丛林的轻快节奏 我幻想着住在一个面朝大海的House，听潮起
+                潮落，守望日出或等候日落 当然，这一切我希望是和你，一起 有人
+              </p>
+            </div>
+          </div>
+        </div>
+        <!--攻略详情-->
+        <div v-if="this.showit">
+          <div class="col-md-12" style="margin-top: 20px">
+            <div class="col-md-4 content-img"><img src="../../assets/images/collection-img2.png" alt=""></div>
+            <div class="col-md-8">
+              <a href="">
+                <h3 style="margin-top:0;text-decoration: none;font-size: 18px">[马来亚-吉隆坡]
+                  <button type="button" class="btn-collect" style="margin-left: 200px;color:#fa0">取消收藏</button>
+                </h3>
+              </a>
 
-
-        <div class="col-md-12 collection">游记收藏</div>
-        <div class="col-md-6">取消收藏</div>
-        <div class="col-md-12 collection-content">攻略收藏内容</div>
-        <!--<div class="col-md-12 anniu">-->
-        <!--<div class="btn  col-md-5 cancel">取消收藏</div>-->
-
-        <!--&lt;!&ndash;<div class="btn  col-md-5 message">私信</div>&ndash;&gt;-->
-        <!--</div>-->
+              <p style="color: #666"> 吉隆坡攻略大全...</p>
+              <p>1.吉隆坡攻略路线..</p>
+              <p>2.好吃的美食在哪里？？</p>
+            </div>
+          </div>
+        </div>
       </li>
       <li class="nav navbar navbar-nav col-md-4"></li>
       <li class="nav navbar navbar-nav col-md-4"></li>
@@ -39,14 +54,15 @@
 
 </template>
 
-<!--复制模板-->
-
 <script>
   export default {
     name: 'MyFocus',
     // props:['user'],
     data() {
-      return {}
+
+      return {
+        showit: false,
+      }
     },
     created() {
 
@@ -55,8 +71,16 @@
       // this.props.token = "123"
     },
 
-    method: {
+    methods: {
 
+      // 显示游记攻略
+      showita: function (event) {
+        var vm = this
+        vm.showit = !vm.showit
+        vm.$refs.abc.style.borderBottomColor = "white"
+        vm.$refs.def.style.borderBottomColor = "white"
+        event.currentTarget.style.borderBottomColor = "#fa0"
+      },
       // 获取关注人信息
       getmessage: function () {
         var vm = this
@@ -76,13 +100,8 @@
 </script>
 
 <style scoped>
-  /*默认显示*/
   ul, li {
     list-style: none;
-  }
-
-  .icno {
-    /*background-color: rgba(169, 169, 169, 0.31);*/
   }
 
   .myfocus {
@@ -91,77 +110,52 @@
     align-items: center;
   }
 
-
   .card {
     border: rgba(0, 0, 0, 0.2) 1px solid;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 10px 1px;
     padding: 10px 15px;
-    width: 500px;
-    height: 520px;
+    width: 700px;
+    margin-left: 15px;
+    margin-top: 35px;
   }
 
   .collection {
     height: 35px;
-    font-size: 18px;
+    font-size: 17px;
     margin-top: 10px;
-    background: gray;
-  }
-  .collection-content{
-    height: 200px;
-    background: #d0bcff;
-  }
-
-  .name {
-    width: 100%;
+    margin-left: 95px;
+    border-bottom: 2px white solid;
     text-align: center;
-    height: 20px;
-    font-size: 20px;
-    font-weight: bold;
-    margin: 10px auto;
+
   }
 
-  .nopadding {
-    padding: 0px !important;
+  .collection-img img {
+    background-repeat: no-repeat;
   }
 
-  .hei {
-    text-align: center;
+  h3 a {
+    font-size: 18px;
+    color: #fa0;
+  }
+
+  .btn-collect {
+    font-size: 12px;
+    margin-left: 75px;
+    line-height: 8px;
+    margin-top: 2px;
+    border: 0px;
+    background: white;
   }
 
   p {
-    font-weight: bolder;
     margin-bottom: 0px;
-
   }
 
   a {
-    font-weight: bold;
+    /*font-weight: bold;*/
     color: darkgrey;
+    text-decoration: none;
   }
 
-  .cancel {
-    background-color: darkgrey;
-    text-align: center;
-    padding: 0px;
-    height: 34px;
-    line-height: 32px;
-
-  }
-
-  .message {
-    border: 1px solid darkgrey;
-    color: darkgrey;
-    margin-left: 29.875px;
-  }
-
-  .message:hover {
-    color: white;
-    background-color: darkgrey;
-    transition: background-color 0.2s, color 0.3s;
-  }
-
-  .anniu {
-    margin: 10px 0px;
-  }
 </style>
